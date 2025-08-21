@@ -1,0 +1,50 @@
+body { background-color: #1e272e; }
+
+.container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 50vh;
+    margin-top: 20px;
+
+    &:hover {
+        > :not(:hover) { opacity: 0.3; }
+    }
+}
+
+img {
+    width: 200px;
+    border-radius: 10px;
+    -webkit-box-reflect: below 2.5px 
+    linear-gradient(transparent, transparent, rgba(3, 3, 3, 0.2));
+    border: 3px ridge #a5b1c2;
+    margin: 5px;
+}
+
+.card {
+    transition: 0.5s ease;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+        filter: grayscale(0%);
+    }
+}
+
+@media screen and (min-width: 600px) {
+    img {  width: 140px; }
+    .container {
+        margin-top: 80px;
+        flex-wrap: nowrap;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    img {  width: 160px; }
+}
+
+@media screen and (min-width: 992px) {
+    .container { margin-top: 130px; }
+    img {  width: 200px; }
+}
